@@ -1,0 +1,180 @@
+@require "../../assets/css/config.styl"
+@import "~kouto-swiss/index.styl"
+
+body
+  &:before
+    content: ''
+    width: 100%
+    height: $beta
+    background-image: linear-gradient( 45deg, $colorPrimaryDark, $colorPrimaryLight )
+.wrap
+  clearfix()
+  margin: auto
+  width: 90%
+  max-width: 1200px
+  .area &
+    padding: $kappa 0
+  +media-query( all, min-width $S )
+    width: 88%
+  +media-query( all, min-width $M )
+    width: 94%
+#header
+  padding: $beta 0 $delta 0
+  clearfix()
+#logo
+  float: left
+  width: 130px
+  height: 55px
+  background-image: url("../../assets/images/logo-owl.png")
+  background-repeat: no-repeat
+  a
+    zoom: 1
+    display: block
+.subnav
+  font-size: 14px
+  margin: 0
+  float: right
+  span
+    line-height: 1
+    padding: 8px 5px
+  li
+    margin-right: 0
+    margin-left: 1.618em
+  a
+    color: #000
+    line-height: 1
+    text-decoration: none
+    padding: 8px 5px
+    -moz-transition: all linear .2s
+    transition: all linear .2s
+    &:hover
+      color: #888
+      text-decoration: underline
+
+.subnav-box
+  padding-bottom: .8em
+  margin: 1.618em auto
+  border-bottom: 1px solid #eee
+  h2
+    margin: 0
+    font-size: 24px
+    font-weight: normal
+    float: left
+    a
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.section
+  display: block
+  margin: rem(64) auto
+  transition: all 0.5s ease
+  clearfix()
+  &:first-child
+    margin-top: 0
+
++media-query( all, min-width $S )
+  .area,
+  .side
+    float: none
+    width: auto
+
+.area
+  margin-left: 0
+  +media-query( all, min-width $M )
+    float: left
+    width: 69%
+    margin-left: 4%
+
+.side-nav
+  li
+    > a
+      text-align: left
+      height: auto
+
+.navbar li
+  a
+    padding: $gamma 0
+    border-bottom: 1px solid #eee
+  &:last-child a
+    border-bottom: 0
+
+.side
+  display: none
+
+  +media-query( all, min-width $M )
+    display: inherit
+    float: left
+    width: 27%
+    ul,
+    li
+      list-style: none
+      margin: 0
+    &-nav
+      a
+        background: $colorGrayLightest
+        padding: $gamma $delta
+        color: $colorGrayDarker
+        transition: all linear .1s
+        display: block
+        text-decoration: none
+        &:hover
+          background: $colorGrayLight
+      li
+        margin-bottom: 1px
+.owl-head
+  font-size: $iota
+  font-weight: normal
+.heading-1
+  margin-top: 0
+  margin-bottom: $epsilon
+.prettyprint
+  font-size: 90%
+  color: $colorGrayDark
+  background: $colorGrayLightest
+  padding: $epsilon
+  overflow: auto
+  margin-top: rem($gamma)
+  position: relative
+  // top: rem(10) * -1
+  margin-bottom: rem(64)
+pre
+  font-size: 90%
+  color: $colorGray
+  background: $colorGrayLight
+  padding: $delta $epsilon
+  overflow: auto
+
+.section
+  // position: absolute
+  // width: 100%
+  // height: 100%
+  // top: 0
+  // left: 0
+  // translate3d: -2000px, 0px, 0px
+  transition: all 300ms ease-out
+  // translate3d: 0px, 0px, 0px
+.moveUp-leave
+  transition-duration: .3s
+  transition-property: transform, opacity
+  transition-timing-function: ease-out
+  transform: translate3d(0,0,0)
+  opacity: 1
+  &.moveUp-leave-active
+    transform: translate3d(0,-15%,0)
+    opacity: 0.3
+
+.moveUp-enter
+  transition-duration: .3s
+  transition-property: transform, opacity
+  transition-timing-function: ease-out
+  transform: translate3d(0,100%,0)
+  z-index: 10000
+  &.moveUp-enter-active
+    transform: translate3d(0,0,0)
+
+

@@ -1,0 +1,38 @@
+# Frotend
+
+## OS
+.DS_Store
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+## Node
+node_modules
+npm-debug.log
+
+## Backup
+*~
+
+## Build
+static/build
+
+## Sublime editor
+*.sublime-project
+*.sublime-workspace
+
+.eslintrc
+
+## Todo
+tasks/
+src/grid
+src/input
+src/styleguide
